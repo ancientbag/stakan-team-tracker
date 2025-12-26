@@ -1,0 +1,74 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2.77px 2.21px 0px #00000012;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+}
+
+.checkboxInput {
+    margin-top: 4px;
+    margin-right: 8px;
+}
+
+.cardDescription {
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.textInput {
+    font-size: 16px;
+}
+
+.textInput::placeholder {
+    color: var(--text-placeholder-color);
+}
+
+.textArea {
+    font-size: 14px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 220px;
+    resize: none;
+    field-sizing: content;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    padding-left: 12px;
+    width: 180px;
+}
+
+.footer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.addToProjectButton {
+    cursor: pointer;
+    border: 0;
+    background-color: unset;
+}
+
+.radioInput {
+    display: flex;
+    font-size: 14px;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.radioInput:last-of-type {
+    margin-bottom: 12px;
+}

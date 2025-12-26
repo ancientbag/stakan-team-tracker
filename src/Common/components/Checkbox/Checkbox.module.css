@@ -1,0 +1,26 @@
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #21272b;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.15s ease-in-out;
+    background-color: #ffffff;
+}
+
+.checkIcon {
+    opacity: 0;
+}
+
+.checkIconVisible {
+    opacity: 1;
+}
+
+.checked {
+    background-color: var(--primary-default);
+}

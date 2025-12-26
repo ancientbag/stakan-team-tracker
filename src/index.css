@@ -1,7 +1,12 @@
 @import '@byndyusoft-ui/reset-css/document';
-@import '@byndyusoft-ui/reset-css/button';
+/* @import '@byndyusoft-ui/reset-css/button'; */
 @import '@byndyusoft-ui/reset-css/text';
 @import '@byndyusoft-ui/reset-css/input';
+
+:root {
+    --text-placeholder-color: #7a7f82;
+    --primary-default: #2b83ba;
+}
 
 html {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -12,5 +17,8 @@ html {
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     margin: 0;
+    padding: 0;
 }
