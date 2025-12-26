@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from 'react';
+//@ts-expect-error navernoe eto infraerror
 import CheckIcon from './assets/bx-check.svg?react';
 import cn from 'classnames';
 

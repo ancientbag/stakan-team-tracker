@@ -47,7 +47,6 @@
 }
 
 .date {
-    padding-left: 12px;
     width: 180px;
 }
 
@@ -71,4 +70,43 @@
 
 .radioInput:last-of-type {
     margin-bottom: 12px;
+}
+
+.segmentContainer {
+    display: flex;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 4px;
+    background-color: #eff0f1;
+    margin-bottom: 8px;
+}
+
+.segmentButton {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.segmentButtonPressed {
+    color: #ffffff;
+    background-color: var(--primary-default);
+}
+
+.segmentButton:not(.segmentButtonPressed):hover {
+    color: #ffffff;
+    background-color: #53585c;
+}
+
+.segmentButton:active {
+    color: #ffffff;
+    background-color: #21272b;
+}
+
+.dateRow {
+    display: flex;
+    font-size: 14px;
+    gap: 4px;
 }

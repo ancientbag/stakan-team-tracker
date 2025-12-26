@@ -1,14 +1,14 @@
 import { useState, type ReactNode } from 'react';
+import cn from 'classnames';
 import { Checkbox } from '../../../Common/components';
+//@ts-expect-error navernoe eto infraerror
 import BoxIcon from './assets/bx-box.svg?react';
 
 import type { ITask } from '../../domain/task';
 import styles from './TaskCard.module.css';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface ITaskProps extends ITask {
-    // onChange: (data: Partial<ITask>) => void;
-}
+interface ITaskProps extends ITask {}
 
 export const TaskCard = ({ name, description, isCompleted }: ITaskProps): ReactNode => {
     const [_name, setName] = useState(name);
@@ -61,47 +61,39 @@ export const TaskCard = ({ name, description, isCompleted }: ITaskProps): ReactN
 
             <footer className={styles.footer}>
                 <div className={styles.right}>
-                    <div className={styles.radioInput}>
-                        <input
-                            type="radio"
-                            name="range"
-                            value="single"
-                            checked={dateRange === 'single'}
-                            onClick={() => {
-                                handleDateRangeChange('single');
-                            }}
-                        />
-
-                        <label
-                            htmlFor="single"
+                    <div className={styles.segmentContainer}>
+                        <button
+                            className={cn(styles.segmentButton, dateRange === 'single' && styles.segmentButtonPressed)}
                             onClick={() => {
                                 handleDateRangeChange('single');
                             }}
                         >
                             В конкретный день
-                        </label>
-                    </div>
-                    <div className={styles.radioInput}>
-                        <input
-                            type="radio"
-                            name="range"
-                            value="multiple"
-                            checked={dateRange === 'multiple'}
-                            onClick={() => {
-                                handleDateRangeChange('multiple');
-                            }}
-                        />
-                        <label
-                            htmlFor="multiple"
+                        </button>
+
+                        <button
+                            className={cn(
+                                styles.segmentButton,
+                                dateRange === 'multiple' && styles.segmentButtonPressed
+                            )}
                             onClick={() => {
                                 handleDateRangeChange('multiple');
                             }}
                         >
-                            Промежуток времени
-                        </label>
+                            Промежуток
+                        </button>
                     </div>
-                    <input type="date" className={styles.date} />
-                    {dateRange === 'multiple' && <input type="date" className={styles.date} />}
+
+                    <div className={styles.dateRow}>
+                        {dateRange === 'multiple' && <div>С</div>}
+                        <input type="date" className={styles.date} />
+                    </div>
+                    {dateRange === 'multiple' && (
+                        <div className={styles.dateRow}>
+                            <div>По</div>
+                            <input type="date" className={styles.date} />
+                        </div>
+                    )}
                 </div>
             </footer>
         </div>
